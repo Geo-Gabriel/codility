@@ -34,4 +34,6 @@ todos, exceto um dos valores em A, ocorrem um número par de vezes.
 '''
 
 def solution(a):
-    pass
+    for number in a:
+        if a.count(number) == 1:
+            return number

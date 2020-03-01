@@ -25,14 +25,44 @@ os elementos de A são todos distintos;
 cada elemento da matriz A é um número inteiro dentro do intervalo [1 .. (N + 1)].
 '''
 
-def solution(A):
-    for number in A[:-1]:
-        if (number + 1) not in A:
-            return number + 1
+# def solution(A):
+#     for number in A[:-1]:
+#         if (number + 1) not in A:
+#             return number + 1
 
-lista = [1,2,4,6,9]
 
-print(solution(lista))
+'''Method: Sum formula'''
+
+def solution(a):
+    if a:
+        for numero in a:
+            pass
+
+
+def dominant(n):
+    result = 0
+    for i in range(n):
+        result += 1
+    return result
+
+def linear(n , a):
+    for i in range(n):
+        if a[i] == 0:
+            return 0
+    return 1
+
+def quadratic(n):
+    result = 0
+    for i in range(n):
+        for j in range(i, n):
+            result += 1
+        return result
+
+print(quadratic(1))
+
+test = [0,1,2,3,4]
+
+
 
 
 # for numero in lista[:-1]:

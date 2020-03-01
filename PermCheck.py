@@ -44,3 +44,17 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 N é um número inteiro dentro do intervalo [1..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [1..1.000.000.000].
 '''
+
+def solution1(A):
+    if len(A) < max(A):
+        return 0
+    return 1
+
+
+def solution2(A):
+    set_a = set(A)
+    set_b = set(range(1, len(A) + 1))
+    if set_a == set_b:
+        return 1
+    else:
+        return 0

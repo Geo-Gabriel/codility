@@ -52,3 +52,15 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 N e M são números inteiros dentro do intervalo [1..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [1..N + 1].
 '''
+
+
+def solution(N, A):
+    counters = [0] * N
+    pass
+
+lista = [3,4,4,6,1,4,4]
+
+print(solution(5, lista))
+
+
+

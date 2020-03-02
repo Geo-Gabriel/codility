@@ -53,7 +53,6 @@ cada elemento da matriz A é um número inteiro dentro do intervalo [1..X].
 '''
 
 
-
 # def solution(X, A):
 #     if sum(A) == X * len(A):
 #         return -1

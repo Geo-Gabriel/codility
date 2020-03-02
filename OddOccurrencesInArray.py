@@ -8,6 +8,7 @@ Por exemplo, na matriz A, de modo que:
   A [0] = 9 A [1] = 3 A [2] = 9
   A [3] = 3 A [4] = 9 A [5] = 7
   A [6] = 9
+
 os elementos nos índices 0 e 2 têm valor 9,
 os elementos nos índices 1 e 3 têm valor 3,
 os elementos nos índices 4 e 6 têm valor 9,
@@ -33,7 +34,19 @@ cada elemento da matriz A é um número inteiro dentro do intervalo [1..1.000.00
 todos, exceto um dos valores em A, ocorrem um número par de vezes.
 '''
 
-def solution(a):
-    for number in a:
-        if a.count(number) == 1:
-            return number
+
+# def solution(a):
+#     for number in a:
+#         if a.count(number) == 1:
+#             return number
+
+
+def solution(A):
+    result = 0
+    for number in A:
+        result ^= number
+    return result
+
+
+lista = [9,3,9,3,9,7,9]
+print(solution(lista))

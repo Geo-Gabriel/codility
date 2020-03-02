@@ -52,9 +52,10 @@ def solution1(A): #41 % Score
 
 
 def solution2(A): #100 % Score
-    set_a = set(A)
-    set_b = set(range(1, len(A) + 1))
-    if set_a == set_b:
+    set1 = set(A)
+    set2 = set(range(1, len(A) + 1))
+    if set1 == set2:
         return 1
-    else:
-        return 0
+    return 0
+
+print(solution2([1,3,4,5,2,7]))

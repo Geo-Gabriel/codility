@@ -53,21 +53,25 @@ cada elemento da matriz A é um número inteiro dentro do intervalo [1..X].
 '''
 
 
-# def solution(X, A):
-#     if sum(A) == X * len(A):
-#         return -1
-#
-#     if A:
-#         for n in A:
-#             if X == n:
-#                 return A.index(n)
-#     return -1
+def solutiona(X, A):
+    if sum(A) == X * len(A):
+        return -1
+
+    if A:
+        for n in A:
+            if X == n:
+                return A.index(n)
+    return -1
 
 
 def solution(X, A):
-    set1 = set()
+    set_1 = set()
     for i, j in enumerate(A):
-        set1.add(j)
-        if len(set1) == X:
+        set_1.add(j)
+        if len(set_1) == X:
             return i
     return -1
+
+
+print(solution(5, [1,3,1,4,2,3,5,4]))
+

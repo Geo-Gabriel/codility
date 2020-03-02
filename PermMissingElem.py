@@ -39,24 +39,6 @@ def solution(a):
             pass
 
 
-def dominant(n):
-    result = 0
-    for i in range(n):
-        result += 1
-    return result
-
-def linear(n , a):
-    for i in range(n):
-        if a[i] == 0:
-            return 0
-    return 1
-
-def quadratic(n):
-    result = 0
-    for i in range(n):
-        for j in range(i, n):
-            result += 1
-        return result
 
 print(quadratic(1))
 

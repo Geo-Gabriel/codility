@@ -67,12 +67,39 @@ l2 = [1,3,5,7,9,10]
 l3 = [1,2,3,45,6,7,8]
 l4 = [1,3,1,5,8,1,5,9]
 
+
 def solution(X, A):
-    pos = set()
+    set1 = set()
     for i, j in enumerate(A):
-        pos.add(j)
-        if len(pos) == X:
+        set1.add(j)
+        if len(set1) == X:
             return i
     return -1
 
+
 print(solution(2, l2))
+
+# -- Lógica do Abreu
+def solution(X, A: list):
+    lista = A
+    lista_posicoes = [X]
+    for j in range(1, X):  # Preenche a lista com as posições necessárias pra chegar até X (1, 2, 3, 4, X)
+        lista_posicoes.append(X-j)
+    lista_posicoes.sort() # Organiza em ordem crescente
+    for k in range(len(lista)):
+        is_list = isinstance(lista[k], list)
+        if is_list: # Verifica se o item atual é uma sublista
+            lista = [*lista[:k], *lista[k]] # Tira de dentro da sublista e faz virar uma lista única
+        lista_split = [*lista[:k+1]] # Parte a lista até a posição atual do for
+        if all(elem in lista_split for elem in lista_posicoes): # Verifica se a lista partida tem todas as posições contidas na lista de posições
+            return k # Retorna a resposta
+    return -1
+
+
+set2 = {1,2,3,4,4,4,5,6}
+lista1 = [2,3,4,1]
+set1 = set()
+
+for i, j in enumerate(lista1):
+    set1.add(j)
+print(set1)

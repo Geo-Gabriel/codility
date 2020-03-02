@@ -19,3 +19,15 @@ Escreva um algoritmo eficiente para as seguintes suposições:
 N é um número inteiro dentro do intervalo [1..100.000];
 cada elemento da matriz A é um número inteiro dentro do intervalo [-1.000.000..1.000.000].
 '''
+
+def solution(A):
+    sort_a = sorted(A)
+    lista1 = [x for x in range(min(A), max(A) + 1)]
+    if sort_a == lista1:
+        return max(lista1) + 1
+    pass
+
+
+lista = [7,6,8,5,4]
+
+print(solution(lista))

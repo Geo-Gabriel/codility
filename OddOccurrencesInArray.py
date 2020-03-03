@@ -44,9 +44,21 @@ todos, exceto um dos valores em A, ocorrem um número par de vezes.
 def solution(A):
     result = 0
     for number in A:
-        result ^= number
+        result = result ^ number
     return result
 
 
-lista = [9,3,9,3,9,7,9]
-print(solution(lista))
+def solution2(A):
+    if len(A) == 1:
+        return A[0]
+    A = sorted(A)
+    for i in range(0, len(A), 2):
+        if i + 1 == len(A):
+            return A[i]
+        if A[i] != A[i + 1]:
+            return A[i]
+
+
+lista = [6,6,8,9,1,2,2,9,8]
+print(solution3(lista))
+

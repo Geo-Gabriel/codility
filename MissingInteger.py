@@ -21,13 +21,34 @@ cada elemento da matriz A é um número inteiro dentro do intervalo [-1.000.000.
 '''
 
 def solution(A):
-    sort_a = sorted(A)
-    lista1 = [x for x in range(min(A), max(A) + 1)]
-    if sort_a == lista1:
-        return max(lista1) + 1
-    pass
+    if not A or 1 not in A:
+        return 1
+
+    set_a = set(A)
+    n = len(set_a)
+    suma = sum(set_a)
+    form = ((n +1) * ((n+1) + 1)) // 2
+    return form - suma
 
 
-lista = [7,6,8,5,4]
+def solution2(A):
+    A.sort()
+    min = 1
+    for elem in A:
+        if elem == min:
+            min = min + 1
+    return min
 
-print(solution(lista))
+def solution3(A):
+    set1 = set(range(1, len(A) + 2))
+    set_a = set(A)
+    diff = set1.difference(set_a)
+    mini = min(diff)
+    return mini
+
+lista = [1,1,2,4,2,5]
+
+set1 = {1,2,4}
+set2 = {1,2,3}
+
+print(solution3(lista))

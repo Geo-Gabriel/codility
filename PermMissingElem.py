@@ -25,29 +25,45 @@ os elementos de A são todos distintos;
 cada elemento da matriz A é um número inteiro dentro do intervalo [1 .. (N + 1)].
 '''
 
+
 # def solution(A):
 #     for number in A[:-1]:
 #         if (number + 1) not in A:
 #             return number + 1
 
 
-'''Method: Sum formula'''
-
-def solution(a):
-    if a:
-        for numero in a:
-            pass
-
+def solution(A):
+    elemento_perdido = len(A) + 1
+    for i, j in enumerate(A):
+        elemento_perdido = elemento_perdido ^ j ^ (i + 1)
+    return elemento_perdido
 
 
-print(quadratic(1))
+# sum of first N natural numbers = (N * (N + 1))/2.
+# Detected time complexity: --> O(N) or O(N * log(N))
 
-test = [0,1,2,3,4]
+
+def solution(A):
+    N = len(A)
+    formula = ((N + 1) * ((N + 1) + 1)) // 2
+    soma = sum(A)
+    return formula - soma
 
 
+lista1 = [x for x in range(1,21)]
+print(lista1)
+lista1.pop(11)
+print(lista1)
+
+
+N = len(lista1)
+formula = ((N + 1) * ((N + 1) + 1)) // 2
+print(formula)
+soma = sum(lista1)
+print(soma)
+print(formula - soma)
 
 
 # for numero in lista[:-1]:
 #     if (numero + 1) not in lista:
 #         print(numero + 1)
-

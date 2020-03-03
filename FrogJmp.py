@@ -29,7 +29,7 @@ X, Y e D são números inteiros dentro do intervalo [1..1.000.000.000]; X ≤ Y.
 
 def solution(x, y, d):
     distance = y - x
-    if distance % d == 0:
+    if distance // d == 0:
         return distance // d
     else:
         return distance // d + 1

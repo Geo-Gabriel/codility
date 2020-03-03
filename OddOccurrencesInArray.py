@@ -58,7 +58,7 @@ def solution2(A):
         if A[i] != A[i + 1]:
             return A[i]
 
-# lista = [6,6,8,9,1,2,2,9,8]
-# print(solution(lista))
 
-print(bin(14)[2:])
+lista = [6,6,8,9,1,2,2,9,8]
+print(solution3(lista))
+
